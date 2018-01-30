@@ -7,21 +7,21 @@
 import { request } from './src/index.js'
 
 App({
-	request: request
+  request: request
 })
 
 
 // 需求页面
 
 app.request({
-	url:'',
-	method: 'GET' , // 默认POST
-	data:'',
-	header:'',
+  url:'',
+  method: 'GET' , // 默认POST
+  data:'',
+  header:'',
 }).then((res) => {
-	//success
+  //success
 }).catch((error) => {
-	//fail
+  //fail
 })
 
 ```
