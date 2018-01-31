@@ -5,10 +5,10 @@ export function request(data) {
       method: method || 'POST',
       data: data.data || {},
       header: data.header || {},
-      success: ((res) => { resolve(res) }),
-      fail: (() => {
+      success: (res) => { resolve(res) },
+      fail: () => {
         resolve({ data: { status: { succeed: 0, error_desc: '网络错误' } } })
-      })
+      }
     })
   })
 }
@@ -26,12 +26,12 @@ export function showImgs(url, index) {
     wx.previewImage({
       urls: url,
       current: url[index] || url[0],
-      succees: ((res) => {
+      succees: (res) => {
         resolve({ succeed: 1 })
-      }),
-      fail: ((error) => {
+      },
+      fail: (error) => {
         resolve({ succeed: 0 })
-      })
+      }
     })
   })
 }
@@ -47,13 +47,13 @@ export function showModal(text, title) {
     wx.showModal({
       title: title || '提示',
       content: text || ' ',
-      success: ((res) => {
+      success: (res) => {
         if (res.confirm) {
           resolve({ succeed: 1 })
         } else if (res.cancel) {
           resolve({ succeed: 0 })
         }
-      })
+      }
     })
   })
 }
