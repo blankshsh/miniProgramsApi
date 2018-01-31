@@ -105,7 +105,7 @@ app.navBack()
 
 ### `showToast(Type, Title, Time, Mask)`
 | key | 说明 | 类型 | 可选参数 | 默认值 |
-| -- | -- | -- | -- |
+| -- | -- | -- | -- | -- |
 | Type | 图标类型 | String | error/loading/succees | loading |
 | Title | 内容 | String | -- | -- |
 | Time | 显示时长 | Number | -- | 2000 |
