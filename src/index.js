@@ -2,7 +2,7 @@ export function request(data) {
   return new Promise((resolve, reject) => {
     wx.request({
       url: data.url,
-      method: method || 'POST',
+      method: data.method || 'POST',
       data: data.data || {},
       header: data.header || {},
       success: (res) => { resolve(res) },
