@@ -37,6 +37,7 @@ app.request()
 
 ### `request(Object)`
 | key | 说明 | 类型 | 默认值 |
+| -- | -- | -- | -- |
 | url | 接口地址 | String | -- |
 | method | 请求方式 | String | POST |
 | data | 发送数据 | Object | -- |
@@ -66,6 +67,7 @@ app.getSize(id).then((res) => {
 
 ### `showImgs(Array, Index)`
 | key | 说明 | 类型 | 默认值 |
+| -- | -- | -- | -- |
 | Array | 图片数组 | Array | -- |
 | Index | 需显示的图片下标 | Number | 0 |
 
@@ -79,6 +81,7 @@ app.showImgs(Array, Index).then((res) => {
 
 ### `showModal(Content, Title)`
 | key | 说明 | 类型 | 默认值 |
+| -- | -- | -- | -- |
 | Content | 内容 | String | -- |
 | Title | 标题 | String | 提示 |
 
@@ -92,6 +95,7 @@ app.showModal(Content, Title).then((res) => {
 
 ### `navBack(Time, Num)`
 | key | 说明 | 类型 | 默认值 |
+| -- | -- | -- | -- |
 | Time | 延时 | Number | 2000 |
 | Num | 后退页数 | Number | 1 |
 
@@ -101,6 +105,7 @@ app.navBack()
 
 ### `showToast(Type, Title, Time, Mask)`
 | key | 说明 | 类型 | 可选参数 | 默认值 |
+| -- | -- | -- | -- |
 | Type | 图标类型 | String | error/loading/succees | loading |
 | Title | 内容 | String | -- | -- |
 | Time | 显示时长 | Number | -- | 2000 |
