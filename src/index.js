@@ -21,11 +21,11 @@ export function getSize(id) {
   })
 }
 
-export function showImgs(url, index) {
+export function showImgs(url, index = 0) {
   return new Promise((resolve, reject) => {
     wx.previewImage({
       urls: url,
-      current: url[index] || url[0],
+      current: url[index],
       succees: (res) => {
         resolve({ succeed: 1 })
       },
@@ -36,17 +36,17 @@ export function showImgs(url, index) {
   })
 }
 
-export function navBack(time, num) {
+export function navBack(time = 2000, num = 1) {
   setTimeout(() => {
-    wx.navigateBack({ delta: num || 1 })
-  }, time || 2000)
+    wx.navigateBack({ delta: num })
+  }, time)
 }
 
-export function showModal(text, title) {
+export function showModal(text = ' ', title = '提示') {
   return new Promise((resolve, reject) => {
     wx.showModal({
-      title: title || '提示',
-      content: text || ' ',
+      title: title,
+      content: text,
       success: (res) => {
         if (res.confirm) {
           resolve({ succeed: 1 })
@@ -58,12 +58,12 @@ export function showModal(text, title) {
   })
 }
 
-export function showToast(type, title, time, mask) {
+export function showToast(type = 'loading', title = ' ', time = 2000, mask = false) {
   wx.showToast({
-    title: title || ' ',
+    title: title,
     image: type === 'error' ? '/static/error_fff.png' : '',
-    icon: type || 'loading',
-    duration: time || 2000,
-    mask: mask || false
+    icon: type,
+    duration: time,
+    mask: mask
   })
 }
